@@ -43,5 +43,5 @@ def day():
 
 
 day()
-        
+       #its very basic i will make a better version asap this is for idea purposes only 
     
