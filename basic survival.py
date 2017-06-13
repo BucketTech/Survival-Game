@@ -8,33 +8,21 @@ alive = 1
 
 
 def day():
-    days_survived = 0
-    while days_survived < 100:
-        global food
-        global water
-        if input('do you want to look for food(Y/N)') == ('Y'):
-            food_found = random.randint(3, 10)
-            food += food_found
-            print('you found +', food_found, ' food')
-            if random.randint(1, 2) == 2:
-                print('an animal attacks (-5 food -2 water)')
-                water -= 2
-                food -= 5
-            else:
-                print('you made it home safe')
-        elif input('do you want to look for water(Y/N)') == ('Y'):
-            water_found = random.randint(3, 10)
-            water += water_found
-            print('you found +', water_found, ' water')
-            if random.randint(1, 2) == 2:
-                print('an animal attacks (-5 water -2 food)')
-                water -= 5
-                food -= 5
-            else:
-                print('you made it home safe')
+    activity = imput('what would you like to do')
+    if activity=('find food'):
+        print('you search for food')
+        foodFound = random.randint(1,10)
+        food+= food
+        print('you found ',foodFound,' food')
+    elif activity=('find water'):
+        print('you search for water')
+        waterFound = random.randint(1,10)
+        water += waterFound
+        print('you found ',waterFound,' water')
+        print('you have ', food, ' food and ', water, ' water')
+
         food -= random.randint(1, 3)
         water -= random.randint(1, 3)
-        print('you have ', food, ' food and ', water, ' water')
         days_survived = days_survived + 1
         print('you have survived ', days_survived, 'days')
 
