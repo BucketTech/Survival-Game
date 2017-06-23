@@ -21,10 +21,10 @@ def day():
         print('you found ',waterFound,' water')
         print('you have ', food, ' food and ', water, ' water')
 
-        food -= random.randint(1, 3)
-        water -= random.randint(1, 3)
-        days_survived = days_survived + 1
-        print('you have survived ', days_survived, 'days')
+    food -= random.randint(1, 3)
+    water -= random.randint(1, 3)
+    days_survived = days_survived + 1
+    print('you have survived ', days_survived, 'days')
 
 
 day()
